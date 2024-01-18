@@ -31,6 +31,12 @@ body {
   display: flex;
   align-items: center;
   z-index: 100;
+  transition: 0.5s;
+}
+
+.header.sticky {
+  background: var(--main-color);
+  box-shadow: 0 0.1rem 1rem var(--secondary-color);
 }
 .logo {
   font-size: 25px;
@@ -44,12 +50,17 @@ body {
 }
 .navbar a {
   position: relative;
+  display: inline-block;
   font-size: 18px;
   color: #fff;
   text-decoration: none;
   font-weight: 500;
   margin-right: 35px;
+  opacity: 0;
+  animation: slideLeft 1s ease forwards;
+  animation-delay: calc(0.2s * var(--i));
 }
+
 .navbar a.active::before {
   content: "";
   position: absolute;
@@ -59,17 +70,22 @@ body {
   height: 2px;
   background-color: #fff;
 }
+
 .toggle {
   display: flex;
   margin-top: 1px;
   background-color: transparent;
   display: flex;
   cursor: pointer;
+  opacity: 0;
+  animation: slideLeft 1s ease forwards;
+  animation-delay: 3.5s;
 }
 .toggle .toggle-icon {
   color: #fff;
   font-size: 24px;
 }
+/* HOME */
 .home {
   width: 100%;
   height: 100vh;
@@ -97,13 +113,21 @@ span {
   animation-delay: 1s;
 }
 .home-content h2 {
+  font-size: 30px;
+  color: #754ef9;
+  -webkit-text-stroke: 0.5px #fff;
   margin-bottom: 10px;
   opacity: 0;
   animation: slideRight 1s ease forwards;
   animation-delay: 1.5s;
 }
 .home-content p {
-  font-size: 16px;
+  font-size: 1.6rem;
+  opacity: 0;
+  animation: slideLeft 1s ease forwards;
+  animation-delay: 1.5s;
+  margin: 2rem 0 3rem;
+  text-align: left;
 }
 .social-media a {
   display: inline-flex;
@@ -121,6 +145,9 @@ span {
   margin-right: 15px;
   margin-bottom: 30px;
   transition: 0.5s ease;
+  opacity: 0;
+  animation: slideLeft 1s ease forwards;
+  animation-delay: 1s;
 }
 .social-media a:hover {
   background-color: var(--main-color);
@@ -139,6 +166,9 @@ span {
   text-decoration: none;
   font-weight: 700;
   transition: 0.5s ease;
+  opacity: 0;
+  animation: slideTop 1s ease forwards;
+  animation-delay: 2s;
 }
 .btn:hover {
   background: transparent;
@@ -174,6 +204,9 @@ span {
   border-right: 384px solid var(--main-color);
   border-bottom: 384px solid var(--main-color);
   border-left: 384px solid transparent;
+  opacity: 0;
+  animation: slideLeft 1s ease forwards;
+  animation-delay: 1.5s;
 }
 .home-img img {
   position: absolute;
@@ -184,6 +217,9 @@ span {
   pointer-events: none;
   border: 4px solid var(--main-color);
   border-radius: 50%;
+  opacity: 0;
+  animation: slideLeft 1s ease forwards;
+  animation-delay: 1.8s;
 }
 
 /* KEYFRAM ANIMATIONS */
@@ -192,8 +228,115 @@ span {
     opacity: 0;
     transform: translateX(-100%px);
   }
+
   100% {
     opacity: 1;
     transform: translateX(0);
   }
+}
+
+@keyframes slideLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(100%px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideTop {
+  0% {
+    opacity: 0;
+    transform: translateY(100%px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ABOUT */
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  margin-top: 10%;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-bottom: 15%;
+}
+
+.about-content {
+  margin-top: 20%;
+}
+
+.about-content h3 {
+  font-size: 2rem;
+}
+
+.about-content p {
+  font-size: 1.6rem;
+  margin: 2rem 0 3rem;
+  text-align: left;
+}
+
+.heading {
+  font-size: 4.5rem;
+  text-align: center;
+}
+.about-content h2 {
+  text-align: left;
+}
+.about-img img {
+  border-radius: 50%;
+  border: 4px solid var(--main-color);
+  border-radius: 50%;
+}
+/* EDUCATION SECTION */
+.education-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.education .education-box {
+  flex: 1 1 20rem;
+  background: var(--primary-color-color);
+  padding: 3rem 2rem 4rem;
+  border-radius: 2rem;
+  box-shadow: 0 0.1rem 0.5rem var(--secondary-color);
+  text-align: center;
+  border-top: 0.6rem solid var(--main-color);
+  border-bottom: 0.6rem solid var(--main-color);
+  transform: 0.5s ease;
+}
+
+.education .education-box:hover {
+  box-shadow: 0 0.1rem 2rem var(--secondary-color);
+  transform: scale(1.02);
+}
+
+.education-box h3 {
+  font-size: 1.6rem;
+}
+.education-box p {
+  font-size: 1.6rem;
+  margin: 1rem 0 3rem;
+}
+.education {
+  min-height: auto;
+  padding: 7rem;
+}
+.education h2 {
+  margin-bottom: 3rem;
+}
+
+.education-box h3:hover {
+  color: var(--main-color);
 }
