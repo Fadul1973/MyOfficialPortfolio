@@ -235,39 +235,15 @@ span {
   }
 }
 
-@keyframes slideLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(100%px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideTop {
-  0% {
-    opacity: 0;
-    transform: translateY(100%px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 /* ABOUT */
 .about {
+  width: 100%;
+  height: 100vh;
+  padding: 60px 7% 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 4rem;
-  margin-top: 10%;
-  margin-left: 20%;
-  margin-right: 20%;
-  margin-bottom: 15%;
+  gap: rem;
 }
 
 .about-content {
@@ -297,6 +273,11 @@ span {
   border-radius: 50%;
 }
 /* EDUCATION SECTION */
+.education {
+  width: 100%;
+  height: 100vh;
+  padding: 60px 7% 0;
+}
 .education-container {
   display: flex;
   justify-content: center;
@@ -339,4 +320,208 @@ span {
 
 .education-box h3:hover {
   color: var(--main-color);
+}
+
+/* SKILLS SECTION */
+.skills {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  padding: 50px 7% 0;
+}
+
+.skill-main {
+  margin-right: 15%;
+  margin-top: 17%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-row-gap: 30px;
+  grid-column-gap: 50px;
+}
+
+.skill-bar {
+  margin-bottom: 2.5rem;
+}
+
+.skill-main h3 {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.skills .main-text .heading {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin-left: 225%;
+  margin-top: 20%;
+  margin-bottom: 3rem;
+}
+
+.skill-left .skill-bar .info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.skill-left .skill-bar .bar {
+  width: 100%;
+  height: 10px;
+  background-color: var(--secondary-color);
+  border-radius: 25px;
+  margin-top: 10px;
+  position: relative;
+}
+
+.skill-bar .bar span {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  background-color: var(--main-color);
+  border-radius: 25px;
+  box-shadow: var(--secondary-color);
+}
+
+.skill-bar .bar .html {
+  width: 70%;
+  animation: html 2s;
+}
+.skill-bar .bar .css {
+  width: 65%;
+  animation: css 3s;
+}
+.skill-bar .bar .javascript {
+  width: 75%;
+  animation: javascript 4s;
+}
+.skill-bar .bar .react {
+  width: 60%;
+  animation: react 5s;
+}
+
+/* SKILL RIGHT */
+.professional {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.box {
+  position: relative;
+  margin: 60px 0;
+  flex: 1 1 15rem;
+  margin-top: 10%;
+}
+
+.box .text {
+  text-align: center;
+  color: var(--secondary-color);
+  font-size: 1rem;
+}
+
+.box .text big {
+  font: 400;
+  letter-spacing: 1px;
+  position: absolute;
+  top: 200%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.box .text small {
+  display: block;
+  font-weight: 600;
+}
+
+.circle {
+  width: 100%;
+  height: 400%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--main-color);
+}
+
+.circle .points {
+  width: 2px;
+  height: 10ps;
+  background-color: var(--main-color);
+  position: absolute;
+  border-radius: 3px;
+  transform: rotate(calc(var(--i) * 120deg)) translateY(-45px);
+  animation: glow 0.04s linear forwards;
+  animation-delay: calc(var(--i) * 0.05s);
+}
+
+/* KEYFRAMES */
+@keyframes slideLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(100%px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideTop {
+  0% {
+    opacity: 0;
+    transform: translateY(100%px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes html {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+
+@keyframes css {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 65%;
+  }
+}
+
+@keyframes javascript {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 75%;
+  }
+}
+
+@keyframes react {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 60%;
+  }
+}
+
+@keyframes glow {
+  0% {
+    background-color: var(--main-color);
+    box-shadow: none;
+  }
+  100% {
+    background: yellowgreen;
+    box-shadow: burlywood;
+  }
 }
