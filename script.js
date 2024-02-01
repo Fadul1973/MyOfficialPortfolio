@@ -80,3 +80,19 @@ form.addEventListener("submit", (e) => {
   sendEmail();
   clearFields();
 });
+
+// Display accupations
+var typed = new Typed(".accupation", {
+  strings: [
+    "A Graduate Software Engineer!!",
+    "Sheffield Hallam University!!",
+    "First Class Honours!!",
+    "Master of Engineering!!",
+    "In Software Engineering!!",
+    "Open to work!!",
+    "A Graduate Software Engineer!!",
+  ],
+  typeSpeed: 50,
+  backSpeed: 100,
+  delaySpeed: 1000,
+});

@@ -118,15 +118,16 @@ span {
   animation: slideRight 1s ease forwards;
   animation-delay: 0.7s;
 }
+
 .home-content h1 {
-  font-size: 50px;
+  font-size: 30px;
   font-weight: 600;
   opacity: 0;
   animation: slideRight 1s ease forwards;
   animation-delay: 1s;
 }
 .home-content h2 {
-  font-size: 30px;
+  font-size: 25px;
   color: #754ef9;
   -webkit-text-stroke: 0.5px #fff;
   margin-bottom: 10px;
@@ -221,6 +222,7 @@ span {
   animation: slideLeft 1s ease forwards;
   animation-delay: 1.5s;
 }
+
 .home-img img {
   position: absolute;
   bottom: 30%;
@@ -229,6 +231,8 @@ span {
   width: 20%;
   pointer-events: none;
   border: 7px solid var(--main-color);
+  box-shadow: 10px 10px 50px var(--main-color);
+  background-color: aqua;
   border-radius: 50%;
   object-fit: cover;
   opacity: 0;
@@ -253,7 +257,9 @@ span {
 
 .about-content {
   margin-top: 5%;
-  margin-left: 150px;
+  margin-left: 20%;
+  justify-content: center;
+  align-items: center;
 }
 
 .about-content h3 {
@@ -264,6 +270,7 @@ span {
   font-size: 1.6rem;
   margin: 2rem 0 3rem;
   text-align: left;
+  width: 50%;
 }
 
 .heading {
@@ -276,9 +283,11 @@ span {
 .about-img img {
   border-radius: 50%;
   height: 130%;
-  width: 150%;
+  width: 200%;
   bottom: 150%;
+  /* margin-left: 20%; */
   border: 7px solid var(--main-color);
+  box-shadow: 5px 5px 30px var(--main-color);
   border-radius: 50%;
   transition: 0.2s ease;
 }
@@ -699,6 +708,28 @@ span {
   text-align: center;
   font-size: 16px;
   color: var(--primary-color);
+}
+
+.footer-iconTop a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8rem;
+  border-radius: 0.8rem;
+  background: #fff;
+  border: 0.2rem solid var(--main-color);
+  margin-left: 90%;
+  outline: 0.2rem solid transparent;
+  transition: 0.5s ease;
+  margin-top: 20px;
+}
+
+.footer-iconTop a:hover {
+  outline-color: var(--bg-color);
+}
+
+.footer-iconTop a i {
+  font-size: 2.5rem;
 }
 
 /* BRAKPOINTS */
