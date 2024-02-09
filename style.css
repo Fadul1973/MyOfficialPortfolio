@@ -49,8 +49,6 @@ body {
   cursor: default;
   margin-right: auto;
   opacity: 1;
-  /* animation: slideRight 1s ease forwards;
-  transition: 0.3s ease; */
 }
 .header .logo:hover {
   transform: scale(1.1);
@@ -277,6 +275,7 @@ span {
   font-size: 4.5rem;
   text-align: center;
 }
+
 .about-content h2 {
   text-align: left;
 }
@@ -285,7 +284,6 @@ span {
   height: 130%;
   width: 200%;
   bottom: 150%;
-  /* margin-left: 20%; */
   border: 7px solid var(--main-color);
   box-shadow: 5px 5px 30px var(--main-color);
   border-radius: 50%;
@@ -295,12 +293,14 @@ span {
 .about-img img:hover {
   transform: scale(1.1);
 }
+
 /* EDUCATION SECTION */
 .education {
   width: 100%;
   height: 100vh;
   padding: 60px 7% 0;
 }
+
 .education-container {
   display: flex;
   justify-content: center;
@@ -347,10 +347,9 @@ span {
 
 /*SECTION SKILLS */
 .skills {
-  width: 100%;
   height: 100vh;
   display: flex;
-  padding: 50px 7% 0;
+  padding: 40px 7% 0;
 }
 
 .skill-main {
@@ -379,6 +378,16 @@ span {
   margin-left: 225%;
   margin-top: 20%;
   margin-bottom: 3rem;
+}
+
+.skills .main-text .heading {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin-left: 370%;
+  margin-top: 50%;
+  margin-bottom: 40px;
 }
 
 .skill-left .skill-bar .info {
@@ -537,6 +546,7 @@ span {
   opacity: 0;
   transition: 0.5s ease;
 }
+
 /* To return to the previous state */
 .projects-box:hover .projects-layer {
   opacity: 1;
@@ -572,6 +582,7 @@ span {
   height: 100vh;
   padding: 60px 7% 0;
 }
+
 .contact .heading {
   margin-top: 40px;
 }
@@ -580,7 +591,6 @@ span {
   display: flex;
   justify-content: center;
   text-align: center;
-  /* margin: 2rem; */
 }
 
 .contact form {
@@ -637,6 +647,7 @@ span {
   animation-delay: 2s;
   cursor: pointer;
 }
+
 .contact form .btn:hover {
   background: transparent;
   color: var(--main-color);
@@ -737,6 +748,7 @@ span {
   html {
     font-size: 55%;
   }
+
   .home .professional-container {
     height: 85.8rem;
   }
@@ -751,6 +763,10 @@ span {
     padding: 2rem 3%;
   }
 
+  section {
+    padding: 10rem 3% 2rem;
+  }
+
   .home .professional-container .overlay {
     right: -15rem;
   }
@@ -761,7 +777,8 @@ span {
 
 @media (max-width: 991px) {
   .navbar a:nth-child(1),
-  .navbar a:nth-child(2) {
+  .navbar a:nth-child(2),
+  .navbar a:nth-child(3) {
     color: var(--main-color);
   }
 
@@ -771,19 +788,22 @@ span {
   }
 
   .home .home-content {
-    max-width: 50rem;
+    max-width: 100rem;
   }
 
   .home .profession-container .overlay {
     right: -39rem;
   }
+
   .home-img img {
     display: none;
   }
+
   .education,
   .skills {
     padding-bottom: 7rem;
   }
+
   .contact {
     min-height: auto;
   }
@@ -811,7 +831,7 @@ span {
     left: 0;
     width: 100%;
     padding: 1rem 3%;
-    background: var(--primary-color);
+    background: var(--bg-color);
     border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
     display: none;
@@ -825,7 +845,21 @@ span {
     display: block;
     font-size: 2rem;
     margin: 3rem 0;
+    color: var(--secondary-color);
+  }
+
+  .navbar a:nth-child(1),
+  .navbar a:nth-child(2),
+  .navbar a:nth-child(3) {
+    color: var(--secondary-color);
+  }
+
+  .navbar a.active {
     color: var(--main-color);
+  }
+
+  .navbar a::before {
+    display: none;
   }
 
   .home {
@@ -835,16 +869,45 @@ span {
   }
 
   .home-content h3 {
-    /* font-size: 2.6rem; */
+    font-size: 2.6rem;
   }
 
   .home-content h1 {
-    font-size: 5rem;
+    font-size: 3rem;
   }
 
-  /* About section */
+  .home-content h2 {
+    font-size: 2.5rem;
+    font-weight: bolder;
+  }
+
+  .home-content .social-media a {
+    margin: 2.5rem 0.7rem 3rem;
+  }
+
+  .home .profession-container {
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+  .home .profession-container .overlay {
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    rotate: 1 1 0 180deg;
+
+    border-width: 23.9rem;
+  }
+
+  /* SECTION ABOUT */
   .about {
     flex-direction: column-reverse;
+    justify-content: center;
     text-align: center;
   }
 
@@ -863,8 +926,9 @@ span {
     border: 7px solid var(--main-color);
     border-radius: 50%;
     transition: 0.2s ease;
-    margin-top: 40px;
+    margin-top: 15px;
   }
+
   .about-content {
     margin-left: 10px;
     text-align: center;
@@ -872,8 +936,52 @@ span {
     align-items: center;
   }
 
+  .about-content p {
+    text-align: center;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
   .about-content h2 {
     text-align: center;
+  }
+
+  /* SECTION EDUCATION */
+  .education .heading {
+    margin-top: 30px;
+  }
+}
+
+/* SECTION SKILLS */
+@media (max-width: 768px) {
+  .skills {
+    height: 100vh;
+    padding: 60px 7% 0;
+  }
+
+  .skill-main {
+    width: 100vh;
+    display: flex;
+    padding: 70px 5% 0;
+    margin-left: 10%;
+    margin-top: 50px;
+  }
+
+  .skills .main-text .heading {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-left: 300%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  /* SECTION PROJECTS */
+
+  .projects .projects-container {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -918,6 +1026,7 @@ span {
   0% {
     width: 0%;
   }
+
   100% {
     width: 70%;
   }
@@ -927,6 +1036,7 @@ span {
   0% {
     width: 0%;
   }
+
   100% {
     width: 65%;
   }
@@ -936,6 +1046,7 @@ span {
   0% {
     width: 0%;
   }
+
   100% {
     width: 75%;
   }
@@ -945,6 +1056,7 @@ span {
   0% {
     width: 0%;
   }
+
   100% {
     width: 60%;
   }
@@ -955,6 +1067,7 @@ span {
     background-color: var(--main-color);
     box-shadow: none;
   }
+
   100% {
     background: yellowgreen;
     box-shadow: burlywood;
