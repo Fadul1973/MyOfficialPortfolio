@@ -108,13 +108,14 @@ span {
   color: var(--main-color);
 }
 .home-content {
-  max-width: 440px;
+  max-width: 550px;
 }
 .home-content h3 {
   font-size: 30px;
   opacity: 0;
   animation: slideRight 1s ease forwards;
   animation-delay: 0.7s;
+  margin-bottom: 20px;
 }
 
 .home-content h1 {
@@ -125,6 +126,8 @@ span {
   animation-delay: 1s;
 }
 .home-content h2 {
+  margin-top: 20px;
+  margin-bottom: 20px;
   font-size: 25px;
   color: #754ef9;
   -webkit-text-stroke: 0.5px #fff;
@@ -134,11 +137,17 @@ span {
   animation-delay: 1.5s;
 }
 .home-content p {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
   font-size: 1.6rem;
   opacity: 0;
   animation: slideLeft 1s ease forwards;
   animation-delay: 1.5s;
   margin: 2rem 0 3rem;
+  margin-bottom: 20px;
   text-align: left;
 }
 .social-media a {
@@ -255,7 +264,7 @@ span {
 
 .about-content {
   margin-top: 5%;
-  margin-left: 20%;
+  margin-left: 15%;
   justify-content: center;
   align-items: center;
 }
@@ -268,7 +277,7 @@ span {
   font-size: 1.6rem;
   margin: 2rem 0 3rem;
   text-align: left;
-  width: 50%;
+  width: 70%;
 }
 
 .heading {
